@@ -1,3 +1,4 @@
+
 public class Main {
     public static void main(String[] args) {
         //homework1
@@ -7,7 +8,7 @@ public class Main {
         int totalSavingsAmount = 0;
         int i = 0;
         while (totalSavingsAmount < 2_459_000) {
-            totalSavingsAmount += totalSavingsAmount/100;
+            totalSavingsAmount += totalSavingsAmount / 100;
             totalSavingsAmount += partOfMoney;
             i++;
             System.out.println("Месяц " + i + ", сумма накоплений равна " + totalSavingsAmount + " рублей");
@@ -48,7 +49,7 @@ public class Main {
         int total = 12_000_000;
         int month = 1;
         for (; deposit < total; month++) {
-            deposit += deposit*monthlyPercentage;
+            deposit += deposit * monthlyPercentage;
             System.out.println("Месяц " + month + ", сумма накоплений равна " + deposit + " рублей");
         }
         System.out.println();
@@ -72,7 +73,7 @@ public class Main {
         int initialAmount = 15_000;
         double percent = 0.07;
         int month1 = 1;
-        for (; month1 <= 9*12; month1++) {
+        for (; month1 <= 9 * 12; month1++) {
             initialAmount += initialAmount * percent;
             if (month1 % 6 == 0) {
                 System.out.println("Месяц " + month1 + ", сумма накоплений равна " + initialAmount + " рублей");
@@ -86,6 +87,29 @@ public class Main {
         int daysMonth = 31;
         for (; friday < daysMonth; friday += 7) {
             System.out.println("Сегодня пятница, " + friday + "-е число. Необходимо подготовить отчет.");
+        }
+        System.out.println();
+
+        //homework3
+        //task №1
+        System.out.println("Задача №1");
+        int every79Years = 79;
+        int zeroYear = 0;
+        int thisYear = 2022;
+        for (; zeroYear <= thisYear + 100; zeroYear += every79Years) {
+            if (zeroYear >= thisYear - 200) {
+                System.out.println(zeroYear);
+            }
+        }
+        System.out.println();
+
+        //homework3
+        //task №2
+        System.out.println("Задача №2");
+        int multiply = 2;
+        int multiplicationUpTo10 = 1;
+        for (; multiplicationUpTo10 <= 10; multiplicationUpTo10++) {
+            System.out.println(multiply + " * " + multiplicationUpTo10 + " = " + (multiply * multiplicationUpTo10));
         }
         System.out.println();
     }
